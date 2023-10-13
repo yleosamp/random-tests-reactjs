@@ -9,6 +9,10 @@ import StateNumber from './components/StateNumber'
 import OnButton from './components/img/on.png'
 import OffButton from './components/img/off.png'
 
+import RenderCondicional from './components/RenderCondicional'
+
+import Greeting from './components/Greeting'
+
 
 import style from './App.module.css'
 
@@ -61,6 +65,11 @@ const App = () => {
       onClick={ (e) => cancelEvent(e) }>
           Acessar github
       </a>
+
+      {/* Renderização condicional: logado/deslogado */}
+      <RenderCondicional />
+      {/* Renderização condicional: saudação */}
+      <Greeting />
     </>
   )
 }
