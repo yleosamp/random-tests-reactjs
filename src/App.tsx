@@ -1,6 +1,7 @@
 import Header from './components/Header'
 import Body from './components/Body'
 import SomaComponente from './components/SomaComponente'
+import Relogio from './components/Relogio'
 
 import style from './App.module.css'
 
@@ -22,6 +23,8 @@ function App() {
         number2={5}
         soma={soma}
       />
+
+      <Relogio />
     </>
   )
 }
