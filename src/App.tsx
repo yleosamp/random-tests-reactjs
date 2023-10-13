@@ -6,6 +6,9 @@ import SomaComponente from './components/SomaComponente'
 import Relogio from './components/Relogio'
 import StateNumber from './components/StateNumber'
 
+import OnButton from './components/img/on.png'
+import OffButton from './components/img/off.png'
+
 
 import style from './App.module.css'
 
@@ -14,7 +17,12 @@ const App = () => {
 		return number1 + number2
 	}
 
+  const cancelEvent = (obj: any) => {
+    return obj.preventDefault()
+  }
+
   const [num, setNum] = useState(10)
+  const [turnOn, setTurnOn] = useState(false)
 
   return (
     <>
@@ -41,6 +49,18 @@ const App = () => {
         setNum={setNum}
       />
 
+      <h1>EVENTOS STATE HOOK</h1>
+      {/* Usando operadores no React.js */}
+      <img src={ turnOn ? OnButton : OffButton } alt={ turnOn ? 'Botão de ligado' : 'Botão de desligado' } width={100} />
+      <button onClick={ () => setTurnOn(!turnOn) }>{ turnOn ? 'Desligar' : 'Ligar' }</button>
+
+      <h3>Cancelar evento</h3>
+      <a 
+      href="https://github.com/yleosamp" 
+      target='_blank'
+      onClick={ (e) => cancelEvent(e) }>
+          Acessar github
+      </a>
     </>
   )
 }

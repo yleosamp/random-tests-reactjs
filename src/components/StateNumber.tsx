@@ -5,8 +5,6 @@ type Props = {
 }
 
 const StateNumber = (props: Props) => {
-
-
   return (
     <div>
       <p>Valor do state num em StateNumber: {props.num}</p>
