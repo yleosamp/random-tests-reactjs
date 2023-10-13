@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 
+const root = ReactDOM.createRoot(document.getElementById('root')!)
+
 const tick = () => {
-  ReactDOM.createRoot(document.getElementById('root')!).render(
+  root.render(
     <React.StrictMode>
       <App />
     </React.StrictMode>,
   )
 }
+
 setInterval(tick, 1000)
 tick()
