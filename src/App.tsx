@@ -13,6 +13,8 @@ import RenderCondicional from './components/RenderCondicional'
 
 import Greeting from './components/Greeting'
 
+import ChangeColor from './components/ChangeColor'
+
 
 import style from './App.module.css'
 
@@ -70,6 +72,8 @@ const App = () => {
       <RenderCondicional />
       {/* Renderização condicional: saudação */}
       <Greeting />
+
+      <ChangeColor />
     </>
   )
 }

@@ -15,7 +15,7 @@ const Greeting = () => {
   
   return (
     <div>
-      <h4>A saudação irá mudar conforme o horário do dia.</h4>
+      <h4 style={ {color: '#00FF'} }>A saudação irá mudar conforme o horário do dia.</h4>
       <p>{ verifyHour() } Horário: { hour() }</p>
     </div>
   )
