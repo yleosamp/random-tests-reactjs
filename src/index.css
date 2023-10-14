@@ -3,3 +3,35 @@
 * {
   font-family: 'Ubuntu', sans-serif;
 }
+
+body {
+  background-color: #121212;
+  color: #a2a2a2;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  align-items: center;
+}
+
+button {
+  background-color: #106e41;
+  border: 1px solid black;
+
+  border-radius: 12px;
+
+  width: 120px;
+  height: 30px;
+
+  cursor: pointer;
+  color: #F5F5F5;
+
+  transition: 200ms;
+}
+
+button:hover {
+  background-color: #179522;
+}

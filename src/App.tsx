@@ -5,18 +5,16 @@ import Body from './components/Body'
 import SomaComponente from './components/SomaComponente'
 import Relogio from './components/Relogio'
 import StateNumber from './components/StateNumber'
-
 import OnButton from './components/img/on.png'
 import OffButton from './components/img/off.png'
-
 import RenderCondicional from './components/RenderCondicional'
-
 import Greeting from './components/Greeting'
-
 import ChangeColor from './components/ChangeColor'
-
+import MapFunction from './components/MapFunction'
+import Formulary from './components/Formulary'
 
 import style from './App.module.css'
+
 
 const App = () => {
 	const soma = (number1: number, number2: number): number => {
@@ -74,6 +72,15 @@ const App = () => {
       <Greeting />
 
       <ChangeColor />
+
+      {/* Funções - MAP */}
+      <h1>FUNÇÕES</h1>
+      <h4>Map</h4>
+      <MapFunction />
+
+      {/* FORMULÁRIO! */}
+      <h1>Formulário</h1>
+      <Formulary />
     </>
   )
 }
