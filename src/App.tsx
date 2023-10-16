@@ -14,6 +14,7 @@ import MapFunction from './components/MapFunction'
 import Formulary from './components/Formulary'
 
 import style from './App.module.css'
+import MultiplyForm from './components/MultiplyForm'
 
 
 const App = () => {
@@ -81,7 +82,7 @@ const App = () => {
       {/* FORMULÁRIO! */}
       <h1>Formulário</h1>
       <Formulary />
-      
+      <MultiplyForm />
     </>
   )
 }
