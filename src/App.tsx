@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 import Header from './components/Header'
 import Body from './components/Body'
@@ -12,9 +12,11 @@ import Greeting from './components/Greeting'
 import ChangeColor from './components/ChangeColor'
 import MapFunction from './components/MapFunction'
 import Formulary from './components/Formulary'
+import MultiplyForm from './components/MultiplyForm'
+import StateElevate from './components/StateElevate'
 
 import style from './App.module.css'
-import MultiplyForm from './components/MultiplyForm'
+import SumNotes from './SumNotes'
 
 
 const App = () => {
@@ -28,6 +30,20 @@ const App = () => {
 
   const [num, setNum] = useState(10)
   const [turnOn, setTurnOn] = useState(false)
+
+  const [notas, setNotas] = useState({"nota1": "0", "nota2": "0", "nota3": "0", "nota4": "0"})
+  const changeNota = (e: React.FormEvent<HTMLInputElement>) => {
+    if(e.currentTarget.getAttribute("name") === "1") {
+      setNotas({ "nota1": e.currentTarget.value, "nota2": notas.nota2, "nota3": notas.nota3, "nota4": notas.nota4 })
+    } else if(e.currentTarget.getAttribute("name") === "2") {
+      setNotas({ "nota1": notas.nota1, "nota2": e.currentTarget.value, "nota3": notas.nota3, "nota4": notas.nota4 })
+    } else if(e.currentTarget.getAttribute("name") === "3") {
+      setNotas({ "nota1": notas.nota1, "nota2": notas.nota2, "nota3": e.currentTarget.value, "nota4": notas.nota4 })
+    } else if(e.currentTarget.getAttribute("name") === "4") {
+      setNotas({ "nota1": notas.nota1, "nota2": notas.nota2, "nota3": notas.nota3, "nota4": e.currentTarget.value })
+    }
+  }
+
 
   return (
     <>
@@ -83,6 +99,37 @@ const App = () => {
       <h1>Formulário</h1>
       <Formulary />
       <MultiplyForm />
+
+      {/* ELEVAÇÃO DE STATE */}
+      <h1>ELEVAÇÃO DE STATE</h1>
+      <StateElevate 
+        number={"1"}
+        nota={parseFloat(notas.nota1)}
+        setNotas={changeNota}
+      />
+      <StateElevate 
+        number={"2"}
+        nota={parseFloat(notas.nota2)}
+        setNotas={changeNota}
+      />
+      <StateElevate 
+        number={"3"}
+        nota={parseFloat(notas.nota3)}
+        setNotas={changeNota}
+      />
+      <StateElevate 
+        number={"4"}
+        nota={parseFloat(notas.nota4)}
+        setNotas={changeNota}
+      />
+      
+
+      <SumNotes 
+        nota1={parseFloat(notas.nota1)}
+        nota2={parseFloat(notas.nota2)}
+        nota3={parseFloat(notas.nota3)}
+        nota4={parseFloat(notas.nota4)}
+      />
     </>
   )
 }
