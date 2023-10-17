@@ -17,6 +17,8 @@ import StateElevate from './components/StateElevate'
 
 import style from './App.module.css'
 import SumNotes from './SumNotes'
+import Contencao from './components/Contencao'
+import UseEffect from './components/UseEffect'
 
 
 const App = () => {
@@ -130,6 +132,16 @@ const App = () => {
         nota3={parseFloat(notas.nota3)}
         nota4={parseFloat(notas.nota4)}
       />
+
+      {/* CONTENÇÃO */}
+      <h1>Contenção</h1>
+      <Contencao>
+        <h4>Elemento pai passando children</h4>
+      </Contencao>
+      {/* useEffect HOOK */}
+      <h1>useEffect HOOK</h1>
+      <UseEffect />
+    
     </>
   )
 }
