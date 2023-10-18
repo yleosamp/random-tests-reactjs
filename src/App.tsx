@@ -14,11 +14,13 @@ import MapFunction from './components/MapFunction'
 import Formulary from './components/Formulary'
 import MultiplyForm from './components/MultiplyForm'
 import StateElevate from './components/StateElevate'
-
-import style from './App.module.css'
 import SumNotes from './SumNotes'
 import Contencao from './components/Contencao'
 import UseEffect from './components/UseEffect'
+import LocalStorage from './components/LocalStorage'
+
+import style from './App.module.css'
+
 
 
 const App = () => {
@@ -138,10 +140,14 @@ const App = () => {
       <Contencao>
         <h4>Elemento pai passando children</h4>
       </Contencao>
+      
       {/* useEffect HOOK */}
       <h1>useEffect HOOK</h1>
       <UseEffect />
-    
+
+      {/* localStorage */}
+      <h1>Local Storage</h1>
+      <LocalStorage />
     </>
   )
 }
