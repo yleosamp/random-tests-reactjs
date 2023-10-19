@@ -43,3 +43,15 @@ button {
 button:hover {
   background-color: #3939a7;
 }
+
+#root {
+  background-color: #121212;
+}
+
+div {
+  background-color: #252525;
+  border-radius: 12px;
+  padding: 36px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}

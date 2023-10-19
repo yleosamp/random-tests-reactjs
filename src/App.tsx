@@ -20,6 +20,8 @@ import UseEffect from './components/UseEffect'
 import LocalStorage from './components/LocalStorage'
 
 import style from './App.module.css'
+import ClassComponent from './components/ClassComponent'
+import ClassState from './components/ClassState'
 
 
 
@@ -140,7 +142,7 @@ const App = () => {
       <Contencao>
         <h4>Elemento pai passando children</h4>
       </Contencao>
-      
+
       {/* useEffect HOOK */}
       <h1>useEffect HOOK</h1>
       <UseEffect />
@@ -148,6 +150,16 @@ const App = () => {
       {/* localStorage */}
       <h1>Local Storage</h1>
       <LocalStorage />
+
+      {/* Componente com classe */}
+      <h1>Componente com classe</h1>
+      <ClassComponent 
+        name='Leonardo'
+      />
+
+      {/* State em componente com classe */}
+      <h1>State em componente com classe</h1>
+      <ClassState />
     </>
   )
 }
